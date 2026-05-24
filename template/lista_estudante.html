@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for student in estudantes %}
+        {{ student.naran_aluno }}
+        {{ student.sexu }}
+        {{ student.idade }}
+        {{ student.data_moris }}
+        {{ student.hela_fatin }}
+        {{ student.email }}
+        {{ student.status }}
+        {{ student.naran_dep }}
+    {% endfor %}
+
+{% endblock %}
