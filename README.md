@@ -21,8 +21,8 @@ cd learning-django-crud
 
 ### 2. Create a virtual environment
 python -m venv env
-source env/bin/activate  # Linux/Mac
-env\Scripts\activate     # Windows
+- source env/bin/activate  # Linux/Mac
+- env\Scripts\activate     # Windows
 
 ### 3. Install dependencies
 pip install -r requirements.txt
@@ -36,6 +36,7 @@ python manage.py runserver
 Open in browser: http://127.0.0.1:8000
 
 ## 📁 Project Structure
+```
 PRATIKA_DJANGO/
 ├── manage.py
 ├── README.md
@@ -61,6 +62,8 @@ PRATIKA_DJANGO/
     ├── home.html
     ├── konaba.html
     └── lista_estudante.html
+
+```
 
 ## 🎯 Learning Goals
 This project was built to understand the basics of Django, including:
