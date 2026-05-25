@@ -1,5 +1,7 @@
 # Learning Django CRUD
 
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=abindacarmo.learning-django-crud)
+
 A simple CRUD application built with Django as part of learning Python web development.
 
 ## 🛠️ Tech Stack
