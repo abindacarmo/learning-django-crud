@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% for student in estudantes %}
+    <!-- {% for student in estudantes %}
         {{ student.naran_aluno }}
         {{ student.sexu }}
         {{ student.idade }}
@@ -11,6 +11,52 @@
         {{ student.email }}
         {{ student.status }}
         {{ student.naran_dep }}
-    {% endfor %}
+    {% endfor %} -->
+
+    <a href="{% url 'input_estudante' %}" class="btn btn-sm bg-success text-white">Registu Estudante</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+            <th>NRE</th>
+            <th>Naran Kompletu</th>
+            <th>Sexu</th>
+            <th>idade</th>
+            <th>Data Moris</th>
+            <th>Hela Fatin</th>
+            <th>Email</th>
+            <th>Departamento</th>
+            <th>Status</th>
+            <th>Asaun</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for student in estudantes %}
+            <tr>
+                <td>{{student.nre}}</td>
+                <td>{{ student.naran_aluno }}</td>
+                <td>{{ student.sexu }}</td>
+                <td>{{ student.idade }}</td>
+                <td>{{ student.data_moris }}</td>
+                <td>{{ student.hela_fatin }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.naran_dep }}</td>
+                <td>
+                    {% if student.status == True %}
+                        Ativu
+                    {% else %}
+                        La Ativu
+                    {% endif %}
+                </td>
+
+                <td>
+                    <a href="#">Hadia</a> |
+                    <a href="#">Hamoos</a>
+                </td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}
