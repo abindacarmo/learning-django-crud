@@ -27,3 +27,7 @@ class Estudante(models.Model):
     
     def __str__(self):
         return self.naran_aluno
+
+
+
+

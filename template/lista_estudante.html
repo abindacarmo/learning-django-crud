@@ -43,18 +43,21 @@
                 <td>{{ student.naran_dep }}</td>
                 <td>
                     {% if student.status == True %}
-                        Ativu
+                        <span class="badge bg-success">Ativu</span>
                     {% else %}
-                        La Ativu
+                        <span class="badge bg-danger">Ativu</span>
                     {% endif %}
                 </td>
 
                 <td>
-                    <a href="#">Hadia</a> |
-                    <a href="#">Hamoos</a>
+                    <div class="d-flex gap-1">
+                        <a href="{% url 'edit_estudante' student.id %}" class="btn btn-sm bg-warning text-white">Hadia</a>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ student.id }}">Hamoos</button>
+                    </div>
                 </td>
                 
             </tr>
+            {% include "delete_modal.html" %}
             {% endfor %}
         </tbody>
     </table>

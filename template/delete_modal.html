@@ -1,0 +1,22 @@
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal{{ student.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <strong>ita boot hakarak apaga dados estudante {{ student.naran_aluno }}??</strong>
+      </div>
+      <div class="modal-footer">
+        <form action="{% url 'delete_estudante' student.id %}">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Lae</button>
+            <button type="submit" class="btn btn-primary">Sim</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
