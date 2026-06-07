@@ -18,3 +18,13 @@ class EstudanteForm(forms.ModelForm):
             "status": forms.CheckboxInput(attrs={"class": "form-check-input"})
 
         }
+
+class UserLoginForm(forms.Form):
+    username = forms.CharField(
+        label="Username",
+        widget=forms.TextInput(attrs={"class": "form-control"}),
+    )
+    password = forms.CharField(
+        label="Password",
+        widget=forms.PasswordInput(attrs={"class": "form-control"}),
+    )
